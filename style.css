@@ -95,6 +95,7 @@ select{
     border-radius: 10px;
     background-color: rgb(199 195 193);
     display: none;
+    font-size: 80%;
 }
 .values{
     text-align: center;
@@ -126,6 +127,11 @@ select{
 table,th,tr{
     border: 2px solid black ;
 }
+th,tr{
+    border: 2px solid black ;
+    width: fit-content;
+    height: fit-content;
+}
 @media only screen and (max-width: 600px) {
     main{
         width: 400px;
@@ -142,8 +148,15 @@ table,th,tr{
     #answer{
         width: 400px;
     }
+    .values h4{
+        font-size: 19px;
+    }
     #earnbreak{
         width: 400px;
+    }
+    table,th,tr{
+        border: 2px solid black ;
+        font-size: 10%;
     }
   }
   @media only screen and (max-width: 400px) {

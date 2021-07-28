@@ -1,0 +1,168 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+main{
+    background-color: rgb(199 195 193);
+    height: 750px;
+    width: 600px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+#box10{
+    width: 60px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: inline-block;
+}
+#box10 h1{
+    font-size: 24px;
+    margin: 7px;
+
+}
+form{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+#insidecurrency input{
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+#insidecurrency label {
+    display: inline-block;
+    background-color: #ddd;
+    padding: 10px 20px;
+    font-family: sans-serif, Arial;
+    font-size: 16px;
+    border: 2px solid #e0e0e0;
+    margin-right: -4px;
+    font-size: 15px;
+    line-height: 1;
+    width: 6%;
+}
+#insidecurrency input[type="radio"]:checked + label {
+    background-color:#cc6102;
+    color: #ddd;
+    border-color: #e0e0e0;
+}
+div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.time{
+    display: inline-flex;
+}
+.time input{
+    width: 50%;
+}
+button{
+    margin: 20px;
+    width: 30%;
+    height: 40px;
+    border-radius: 10px;
+    border-style: none;
+    outline: none;
+}
+.head{
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+input{
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    border-style: none;
+    outline: none;
+}
+select{
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    border-style: none;
+    outline: none;
+}
+#answer{
+    margin-top: 50px;
+    width: 600px;
+    height: fit-content;
+    border-radius: 10px;
+    background-color: rgb(199 195 193);
+    display: none;
+}
+.values{
+    text-align: center;
+}
+.values h6{
+    font-size: 26px;
+    margin: -5px;
+}
+.values h4{
+    font-size: 40px;
+    margin: 20px;
+}
+#answer h1{
+    text-align: center;
+}
+#button{
+    margin-top: 20px;
+}
+
+#earnbreak{
+    width: 600px;
+    background-color: rgb(199 195 193);
+    height: fit-content;
+    border-radius: 10px;
+    margin-top: 50px;
+    text-align: center;
+    display: none;
+}
+table,th,tr{
+    border: 2px solid black ;
+}
+@media only screen and (max-width: 600px) {
+    main{
+        width: 400px;
+    }
+    h1{
+        font-size: 1.5em;
+    }
+    #insidecurrency label {
+        width: 1%;
+    }
+    .interestrate input{
+        width: 45%;
+    }
+    #answer{
+        width: 400px;
+    }
+    #earnbreak{
+        width: 400px;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    main{
+        width: 300px;
+    }
+    h1{
+        font-size: 1.2em;
+    }
+    #insidecurrency label {
+        width: 1%;
+    }
+    .interestrate input{
+        width: 45%;
+    }
+    #answer{
+        width: 300px;
+    }
+    #earnbreak{
+        width: 300px;
+    }
+  }

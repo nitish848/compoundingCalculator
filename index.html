@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Daily Compounding Calculator</title>
+</head>
+
+<body>
+    <h1>Daily Compound Interest</h1>
+    <main>
+        <form id="myform">
+            <div class="currencydiv">
+                <label for="currency" class="head">Currency</label>
+                <span id="insidecurrency">
+                    <input type="radio" name="currency" id="currency1" value="dollar" checked>
+                    <label style="border-radius:10px 0px 0px 10px;" for="currency1" onclick="mycurr1()">$</label>
+                    <input type="radio" name="currency" id="currency2" value="euro">
+                    <label for="currency2" onclick="mycurr2()">€</label>
+                    <input type="radio" name="currency" id="currency3" value="pound">
+                    <label for="currency3" onclick="mycurr3()">£</label>
+                    <input type="radio" name="currency" id="currency4" value="rupee">
+                    <label for="currency4" onclick="mycurr4()">₹</label>
+                    <input type="radio" name="currency" id="currency5" value="any">
+                    <label style="border-radius:0px 10px 10px 0px;" for="currency5" onclick="mycurr5()">&nbsp;</label>
+                </span>
+            </div>
+            <div class="pripcipalAmount">
+                <label for="amount" class="head">Principal Amount</label>
+                <span id="currencysymbol">
+                    <span id="currname">$</span>
+                    <input type="number" step="any" min="0" required="required" name="amount" id="amount"
+                        inputmode="decimal">
+                </span>
+            </div>
+            <div class="interestrate">
+                <label for="percent" class="head">Interest rate</label>
+                <span>
+                    <input type="number" min="0" required="required" name="percent" id="percent" inputmode="decimal">
+                    <select name="percentperiod" id="percentperiod">
+                        <option value="daily" selected>Daily</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="monthly">Monthly</option>
+                        <option value="yearly">Yearly</option>
+                    </select>
+                </span>
+                <label for="box10" class="head">RandomBox</label>
+                <span id="box10"></span>
+            </div>
+            <div class="time">
+                <span class="time">
+                    <div class="years">
+                        <label for="year">Year</label>
+                        <input required="required" type="number" name="year" min="0" id="year" inputmode="decimal"
+                            required>
+                    </div>
+                    <div class="months">
+                        <label for="months">Months</label>
+                        <input required="required" type="number" name="months" min="0" id="months" inputmode="decimal"
+                            required>
+                    </div>
+                    <div class="days">
+                        <label for="days">Days</label>
+                        <input required="required" type="number" name="days" min="0" id="days" inputmode="decimal"
+                            required>
+                    </div>
+                </span>
+            </div>
+            <div class="dailyinvestment">
+                <label for="invperiod" class="head">Daily reinvest rate</label>
+                <select name="invperiod" id="invperiod">
+                    <option value="100" selected>100</option>
+                    <option value="90">90</option>
+                    <option value="80">80</option>
+                    <option value="70">70</option>
+                    <option value="60">60</option>
+                    <option value="50">50</option>
+                    <option value="40">40</option>
+                    <option value="30">30</option>
+                    <option value="20">20</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <div class="additionaldeposits">
+                <label for="addDep" class="head">Additional Deposits</label>
+                <span>
+                    <input required="required" type="number" min="0" required="required" name="addDep" id="addDep"
+                        inputmode="decimal">
+                    <select name="addDepPeriod" id="addDepPeriod">
+                        <option value="daily" selected>Daily</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="monthly">Monthly</option>
+                        <option value="yearly">Yearly</option>
+                    </select>
+                </span>
+            </div>
+            <div class="date">
+                <label for="date" class="head">Principal Amount</label>
+                <input required="required" type="date" required="required" name="date" id="date">
+            </div>
+            <label for="breakdown" class="head">Daily reinvest rate</label>
+            <select name="breakdown" id="breakdown">
+                <option value="daily" selected>Daily</option>
+                <option value="monthly">Monthly</option>
+                <option value="yearly">Yearly</option>
+            </select>
+            <input required="required" type="button" value="Submit" onclick="calculate()" id="button">
+        </form>
+
+    </main>
+    <div id="answer">
+    </div>
+    <div id="earnbreak">
+        <h1>Earning BreakDown</h1>
+        <div id="table">
+            <table id="tableinside">
+                <tr>
+                    <th>Date</th>
+                    <th>Earnings</th>
+                    <th>Reinvest</th>
+                    <th>Cash Out</th>
+                    <th>Balance</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
